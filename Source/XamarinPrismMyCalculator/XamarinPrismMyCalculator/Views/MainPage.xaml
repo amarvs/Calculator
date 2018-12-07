@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinPrismMyCalculator.Views.MainPage"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest" Value="70"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="Center">
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="EndAndExpand">
+            <Label FlowDirection="RightToLeft" HorizontalTextAlignment="End" FontSize="30" Text="{Binding Expression}"></Label>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="AC" Command="{Binding KeyPressed}" CommandParameter="AC"/>
+                    <Button Text="+/-" Command="{Binding KeyPressed}" CommandParameter="+/-"/>
+                    <Button Text="%" Command="{Binding KeyPressed}" CommandParameter="%"/>
+                    <Button Text="/" Command="{Binding KeyPressed}" CommandParameter="/"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="7" Command="{Binding KeyPressed}" CommandParameter="7"/>
+                    <Button Text="8" Command="{Binding KeyPressed}" CommandParameter="8"/>
+                    <Button Text="9" Command="{Binding KeyPressed}" CommandParameter="9"/>
+                    <Button Text="*" Command="{Binding KeyPressed}" CommandParameter="*"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="4" Command="{Binding KeyPressed}" CommandParameter="4"/>
+                    <Button Text="5" Command="{Binding KeyPressed}" CommandParameter="5"/>
+                    <Button Text="6" Command="{Binding KeyPressed}" CommandParameter="6"/>
+                    <Button Text="-" Command="{Binding KeyPressed}" CommandParameter="-"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="1" Command="{Binding KeyPressed}" CommandParameter="1"/>
+                    <Button Text="2" Command="{Binding KeyPressed}" CommandParameter="2"/>
+                    <Button Text="3" Command="{Binding KeyPressed}" CommandParameter="3"/>
+                    <Button Text="+" Command="{Binding KeyPressed}" CommandParameter="+"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="0" WidthRequest="148" Command="{Binding KeyPressed}" CommandParameter="0"/>
+                    <Button Text="." Command="{Binding KeyPressed}" CommandParameter="."/>
+                    <Button Text="=" Command="{Binding KeyPressed}" CommandParameter="="/>
+                </StackLayout>
+            </StackLayout>
+            <Label Font="Red" FontSize="15" Text="{Binding ErrorMessage}"></Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
