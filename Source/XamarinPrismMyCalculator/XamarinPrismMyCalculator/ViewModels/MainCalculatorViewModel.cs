@@ -14,7 +14,7 @@ namespace XamarinPrismMyCalculator.ViewModels
         public MainCalculatorViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "My Calculator";
+            Title = "Amar's Calculator";
         }
 
         private string _expression = string.Empty;
