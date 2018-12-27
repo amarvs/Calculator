@@ -1,5 +1,5 @@
 before_build:
-  - nuget restore
+  - nuget restore "Source\XamarinPrismMyCalculator.sln"
 build_script:
   - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\XamarinPrismMyCalculator.Android.csproj"
 artifacts:
