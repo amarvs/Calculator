@@ -3,4 +3,4 @@ before_build:
 build_script:
   - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\XamarinPrismMyCalculator.Android.csproj"
 artifacts:
-  - path: "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.companyname.appname-Signed.apk"
+  - path: Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.companyname.appname-Signed.apk
