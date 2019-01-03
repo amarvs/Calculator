@@ -4,6 +4,6 @@ before_build:
 build_script:
   - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\XamarinPrismMyCalculator.Android.csproj"
 after_build:
-  - ps: Push-AppveyorArtifact Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.amarapp.calculator-Signed.apk -FileName $("AssetTrackHandHeld-"+$Env:GitVersion_FullSemVer+".apk")
+  - ps: Push-AppveyorArtifact Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.amarapp.calculator-Signed.apk -FileName Android\$("AssetTrackHandHeld-"+$Env:GitVersion_FullSemVer+".apk")
 #artifacts:
 #  - path: Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.amarapp.calculator-Signed.apk
