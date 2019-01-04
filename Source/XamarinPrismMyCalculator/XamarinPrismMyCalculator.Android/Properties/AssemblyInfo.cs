@@ -33,10 +33,10 @@ using Android.App;
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
 
-// // Always disable the debug state in a released application as it is possible (via JDWP) to gain full access to the 
-// // Java process and execute arbitrary code in the context of the application if this debug state is not disabled.
-// #if DEBUG
-// [assembly: Application(Debuggable=true)]
-// #else
-// [assembly: Application(Debuggable=false)]
-// #endif
+// Always disable the debug state in a released application as it is possible (via JDWP) to gain full access to the 
+// Java process and execute arbitrary code in the context of the application if this debug state is not disabled.
+#if DEBUG
+[assembly: Application(Debuggable=true)]
+#else
+[assembly: Application(Debuggable=false)]
+#endif
