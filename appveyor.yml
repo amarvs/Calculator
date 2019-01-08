@@ -4,8 +4,8 @@ before_build:
 build_script:
   - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\XamarinPrismMyCalculator.Android.csproj"
   
-  - msbuild "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\XamarinPrismMyCalculator.UWP.csproj" /p:Configuration=Release /p:AppxPackageDir="Build\AppxPackages\\" /p:AppxBundlePlatforms="x86|x64|ARM" /p:AppxBundle=Always
+  #- msbuild "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\XamarinPrismMyCalculator.UWP.csproj" /p:Configuration=Release /p:AppxPackageDir="Build\AppxPackages\\" /p:AppxBundlePlatforms="x86|x64|ARM" /p:AppxBundle=Always
   
 after_build:
-  - ps: Push-AppveyorArtifact Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.amarapp.calculator-Signed.apk -FileName Android\$("Calculator"+".apk")
-  - ps: Push-AppveyorArtifact "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\Build\AppxPackages\**\*.appxbundle" -FileName Android\$("Calculator"+".appxbundle")
+  - ps: Push-AppveyorArtifact Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\bin\Release\com.amarapp.calculator-Signed.apk -FileName Android\$("Calculator"+".apk") -DeploymentName "Android"
+  #- ps: Push-AppveyorArtifact "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\Build\AppxPackages\**\*.appxbundle" -FileName Windows\$("Calculator"+".appxbundle")
