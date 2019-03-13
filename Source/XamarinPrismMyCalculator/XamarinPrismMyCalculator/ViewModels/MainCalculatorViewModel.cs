@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace XamarinPrismMyCalculator.ViewModels
 {
@@ -15,6 +16,7 @@ namespace XamarinPrismMyCalculator.ViewModels
             : base(navigationService)
         {
             Title = "Amar's Calculator";
+            VersionNumber = AppInfo.VersionString + " + " + AppInfo.BuildString;
         }
 
         private string _expression = string.Empty;
@@ -22,6 +24,13 @@ namespace XamarinPrismMyCalculator.ViewModels
         {
             get { return _expression; }
             set { SetProperty(ref _expression, value); }
+        }
+
+        private string _versionNumber;
+        public string VersionNumber
+        {
+            get { return _versionNumber; }
+            set { SetProperty(ref _versionNumber, value); }
         }
 
         private string _errorMessage;

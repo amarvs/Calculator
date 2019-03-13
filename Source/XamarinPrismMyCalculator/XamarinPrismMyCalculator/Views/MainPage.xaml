@@ -10,6 +10,7 @@
     </ContentPage.Resources>
     <StackLayout HorizontalOptions="Center">
         <StackLayout HorizontalOptions="Fill" VerticalOptions="EndAndExpand">
+            <Label  FontSize="30" Text="{Binding VersionNumber}"></Label>
             <Label FlowDirection="RightToLeft" HorizontalTextAlignment="End" FontSize="30" Text="{Binding Expression}"></Label>
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
