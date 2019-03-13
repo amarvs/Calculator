@@ -11,8 +11,10 @@ namespace XamarinPrismMyCalculator.Versioning
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Updating version");
             UpdateUwpVersion(args[0], args[1]);
             UpdateAndroidVersion(args[0], args[1]);
+            Console.WriteLine("Version Updated");
         }
 
         static void UpdateUwpVersion(string version, string build)
