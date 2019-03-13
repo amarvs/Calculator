@@ -1,11 +1,12 @@
 image: Visual Studio 2017
 before_build:
   - nuget restore "Source\XamarinPrismMyCalculator.sln"
-build_script:
-
+  
   - msbuild "Source\XamarinPrismMyCalculator.Versioning\XamarinPrismMyCalculator.Versioning.csproj" "/p:Configuration=Release"
 
   - cmd "Source\XamarinPrismMyCalculator.Versioning\bin\Release\XamarinPrismMyCalculator.Versioning.exe" 16.1.0.0 3
+  
+build_script:
   
   - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\XamarinPrismMyCalculator.Android.csproj"
   
