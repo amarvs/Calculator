@@ -4,7 +4,7 @@ before_build:
   
   - cmd: msbuild "Source\XamarinPrismMyCalculator.Versioning\XamarinPrismMyCalculator.Versioning.csproj" "/p:Configuration=Release"
 
-  "Source\XamarinPrismMyCalculator.Versioning\bin\Release\XamarinPrismMyCalculator.Versioning.exe" "16.1.0.0" "3"
+  - ps: Source\XamarinPrismMyCalculator.Versioning\bin\Release\XamarinPrismMyCalculator.Versioning.exe "16.1.0.0" "3"
   
 build_script:
   
