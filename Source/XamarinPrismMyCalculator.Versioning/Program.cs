@@ -19,7 +19,7 @@ namespace XamarinPrismMyCalculator.Versioning
 
         static void UpdateUwpVersion(string version, string build)
         {
-            string fileName = @"..\..\..\..\Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\Package.appxmanifest";
+            string fileName = @"Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.UWP\Package.appxmanifest";
             try
             {
                 XmlDocument xml = new XmlDocument();
@@ -40,7 +40,7 @@ namespace XamarinPrismMyCalculator.Versioning
         }
         static void UpdateAndroidVersion(string version, string build)
         {
-            string fileName = @"..\..\..\..\Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\Properties\AndroidManifest.xml";
+            string fileName = @"Source\XamarinPrismMyCalculator\XamarinPrismMyCalculator.Android\Properties\AndroidManifest.xml";
             try
             {
                 XmlDocument xml = new XmlDocument();
